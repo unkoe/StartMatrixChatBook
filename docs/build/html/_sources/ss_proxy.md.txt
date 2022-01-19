@@ -66,10 +66,9 @@ ss://
 > 截图中 ssr 链接无法用 Shadowsocks 客户端导入，所以你应该使用搜索到的链接。
 > 如果想要使用，具体可以看 [shadowsockR](https://github.com/selierlin/Share-SSR-V2ray#shadowsockR-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B) 的介绍。
 
-### 使用和配置 Shadowsocks
+#### 使用和配置 Shadowsocks
 
-然后根据 [配置 Shadowsocks 账号](ss/2-windows-setup-guide-cn.html#id17) 介绍导入节点信息。
-具体是复制链接后，**右键点击系统右下角的 Shadowsocks 托盘 -> 从剪贴板导入URL**。
+复制ssr链接后，**右键点击系统右下角的 Shadowsocks 托盘 -> 从剪贴板导入URL**。
 
 ![导入ss节点链接](_static/import_ss_url.png)
 
@@ -83,6 +82,8 @@ ss://
 ![全局代理](_static/sys_proxy.png)
 
 > 笔者目前使用的是 v2rayN ，不过这两个 UI 类似，截图是错误的，但是文字描述是正确的。你也可以看**工具附录**拷贝的 
-> [具体](ss/2-windows-setup-guide-cn.html#id21) 使用方式。
+> [具体](ss/2-windows-setup-guide-cn.html) 使用方式。
 
 不需要使用时记得关闭代理，它会让你访问一些国内的网站变得困难。
+
+你也可以参考工具附录中的 [配置 Shadowsocks 账号](ss/2-windows-setup-guide-cn.html) 介绍导入节点信息。
