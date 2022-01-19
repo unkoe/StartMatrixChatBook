@@ -32,8 +32,13 @@ release = '0.0.1 alpha'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinxcontrib.napoleon',
+    'sphinxcontrib.apidoc',
+    'sphinx.ext.viewcode',
+    'm2r2'
 ]
 
+source_suffix = ['.rst', '.md']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -48,14 +53,7 @@ language = 'zh_CN'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-extensions = [
-    'sphinxcontrib.napoleon',
-    'sphinxcontrib.apidoc',
-    'sphinx.ext.viewcode',
-    'm2r2'
-]
-
-source_suffix = ['.rst', '.md'] 
+exclude_patterns = []
 
 
 # -- Options for HTML output -------------------------------------------------
