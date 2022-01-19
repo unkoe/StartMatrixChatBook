@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>实用的代理技巧 &mdash; 开始使用 Matrix 聊天手册! 0.0.1 alpha 文档</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="README" href="readme_link.html" />
+    <link rel="prev" title="快速开始" href="quick_start.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> 开始使用 Matrix 聊天手册!
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html#matrix">什么是 Matrix ？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">快速开始</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">实用的代理技巧</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">工具使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shadowsocks">订阅 Shadowsocks 服务</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">供应商</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shadowsocks-server">白嫖 Shadowsocks Server</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">使用和配置 Shadowsocks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="readme_link.html">README</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">工具附录:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ss/2-windows-setup-guide-cn.html">Shadowsocks 设置方法 (Windows)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ss/3-macos-setup-guide-cn.html">Shadowsocks 设置方法 (macOS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ss/4-ios-setup-guide-cn.html">Shadowsocks 设置方法 (iOS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ss/5-android-setup-guide-cn.html">Android 下 Shadowsocks 设置方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ss/6-linux-setup-guide-cn.html">Shadowsocks 设置方法 (Linux)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">开始使用 Matrix 聊天手册!</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>实用的代理技巧</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/ss_proxy.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>实用的代理技巧<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>如果你没有忘记看 <a class="reference external" href="readme_link.html">README</a> ⚡，那么应该会注意到使用 Matrix 的前提可能需要一些代理技巧。</p>
+<p>具体则是笔者使用 <strong>Element for Windows</strong> 过程中遇到了安装后需要向被墙的网络下载本地化资源的问题， 同时有人向我反应 <strong>Mac</strong> 也有相同的问题。</p>
+<a class="reference external image-reference" href="_static/failed_initialize_resource.png"><img alt="资源初始化失败" src="_images/failed_initialize_resource.png" /></a>
+<p>也就是说当你使用官方客户端时涉及初始化不同国家地区语言的操作时，必须掌握一些翻墙的技巧才能让 Element 客户端正常工作。
+<span class="raw-html-m2r"><del>不过已经2202年了，不会还有人不知道怎么翻墙吧，不会吧不会吧？</del></span> 😜</p>
+<p>🥳 这个章节将教会大家一些临时的代理小技巧</p>
+<blockquote>
+<div><p>需要注意的是，这些免费翻墙服务器不少与境外的轮子和反贼相关，虽然是本章节的教学是基于 github 的 repo 展开，但是可能存在传播上的法律风险，
+希望看完这本电子书后，尽量不去看、不传播相关的内容。</p>
+</div></blockquote>
+<p><a class="reference external" href="https://github.com">Github</a> 是一个面向开源的代码托管平台，目前已经被微软收购。
+鉴于国内的开源使用需求和开源世界的政治正确，GFW 目前还没有将之封杀，但是时不时抽风连不上。</p>
+<blockquote>
+<div><p>如果你遇到了连不上的情况，说明需要泡杯茶等一会再点开看看。</p>
+</div></blockquote>
+<p>Github 除了代码托管，也有各种乱七八糟的资源，我们需要在一个没有被墙的地方获取翻墙工具，
+这就是再也合适不过的平台。</p>
+<p><a class="reference external" href="https://github.com/selierlin/Share-SSR-V2ray">Share-SSR-V2ray</a> 是 Github 上托管的一个仓库，我们将基于它展开章节。</p>
+<section id="id2">
+<h2>工具使用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>由于 Github 经常抽风，笔者已经将 <a class="reference external" href="https://github.com/selierlin/Share-SSR-V2ray">Share-SSR-V2ray</a> 中 <code class="docutils literal notranslate"><span class="pre">shadowsocks</span></code> 各平台工具的使用方法拷贝到了附录，详见<a class="reference external" href="introduction.html">介绍</a>。</p>
+<p>下面介绍白嫖仓库中收集的 Shadowsocks 的使用方法。至于其它几种工具(Clash、ShadowsockR、V2ray和浏览器插件代理等)，请等待施工或者自行探索。</p>
+</section>
+<section id="shadowsocks">
+<h2>订阅 Shadowsocks 服务<a class="headerlink" href="#shadowsocks" title="永久链接至标题">¶</a></h2>
+<p>Shadowsocks 是一个 C/S 架构的代理工具，它由境外没有被 GFW 封杀的服务器搭建 Server 端提供流量代理转发能力，
+通过用户安装的 Client 端开启 PAC 或者系统代理。</p>
+<p>Client 端将用户被拦截的请求将被 Server 端代理，由 Server 端将这个请求发送至真正的目标，Server 端得到响应后解包再发送给用户，由此让客户端代理的主机无感知的绕过防火墙请求境外网站。</p>
+<p>所以，代理的前提是必须有一台设在境外没有被 GFW 墙的服务器，但是因为其具有成本和技术的门槛，所以推荐使用第三方提供的服务。
+以下将介绍付费和白嫖的方法。</p>
+<section id="id5">
+<h3>供应商<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>如果你愿意付费使服务更稳定，<a class="reference external" href="https://github.com/selierlin/Share-SSR-V2ray/blob/master/1-share-ssr-v2ray.md">这里</a> 有被推荐的机场，
+优点是它们的主页因为维护较好，基本不会被 GFW 墙而且有相当多的节点使用起来省心可靠，不过需要注意供应商跑路的风险，不要买太长的时间减少沉没成本。</p>
+<p>当然我们可能只需要使用一下，那么试用白嫖无疑是你最好的选择。</p>
+<blockquote>
+<div><p>理论上如果你可以不断的注册邮箱，那么可以无限制的进行试用。有机会再介绍这种方法。</p>
+</div></blockquote>
+</section>
+<section id="shadowsocks-server">
+<h3>白嫖 Shadowsocks Server<a class="headerlink" href="#shadowsocks-server" title="永久链接至标题">¶</a></h3>
+<p>鉴于国内始终无法下定决心对 Github 下杀手，那么最可靠的方式可能是通过别人更新在 GitHub 仓库里的 Shadowsocks 账号（<span class="raw-html-m2r"><del>目前经过笔者测试，其它方式已经阵亡都需要翻墙了</del></span>，
+这是<a class="reference external" href="https://github.com/selierlin/Share-SSR-V2ray">Share-SSR-V2ray</a> 推荐持续在更新的 <a class="reference external" href="https://github.com/Alvin9999/new-pac/wiki/ss%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7">Github仓库</a> ，
+目前测试该仓库可以正常使用。</p>
+<p>我们使用 <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">F</span></code> 搜索关键词：</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ss://
+</pre></div>
+</div>
+<p>下图类似的链接你可以任意复制一个：</p>
+<a class="reference external image-reference" href="_static/ss_link.png"><img alt="ss节点链接" src="_images/ss_link.png" /></a>
+<blockquote>
+<div><p>截图中 ssr 链接无法用 Shadowsocks 客户端导入，所以你应该使用搜索到的链接。
+如果想要使用，具体可以看 <a class="reference external" href="https://github.com/selierlin/Share-SSR-V2ray#shadowsockR-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B">shadowsockR</a> 的介绍。</p>
+</div></blockquote>
+</section>
+</section>
+<section id="id9">
+<h2>使用和配置 Shadowsocks<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<p>然后根据 <a class="reference external" href="ss/2-windows-setup-guide-cn.html#id17">配置 Shadowsocks 账号</a> 介绍导入节点信息。
+具体是复制链接后，<strong>右键点击系统右下角的 Shadowsocks 托盘 -&gt; 从剪贴板导入URL</strong>。</p>
+<a class="reference external image-reference" href="_static/import_ss_url.png"><img alt="导入ss节点链接" src="_images/import_ss_url.png" /></a>
+<p>导入成功后，通过 <code class="docutils literal notranslate"><span class="pre">右键托盘</span> <span class="pre">-&gt;</span> <span class="pre">服务器</span> <span class="pre">-&gt;</span> <span class="pre">节点</span></code> 选中你刚刚导入的 ss 节点，</p>
+<a class="reference external image-reference" href="_static/ss_node.png"><img alt="选择需要使用的ss节点" src="_images/ss_node.png" /></a>
+<p>最后<code class="docutils literal notranslate"><span class="pre">右键托盘</span> <span class="pre">-&gt;</span> <span class="pre">系统代理</span> <span class="pre">-&gt;</span> <span class="pre">全局代理</span></code> 即可。</p>
+<a class="reference external image-reference" href="_static/sys_proxy.png"><img alt="全局代理" src="_images/sys_proxy.png" /></a>
+<blockquote>
+<div><p>笔者目前使用的是 v2rayN ，不过这两个 UI 类似，截图是错误的，但是文字描述是正确的。你也可以看<strong>工具附录</strong>拷贝的
+<a class="reference external" href="ss/2-windows-setup-guide-cn.html#id21">具体</a> 使用方式。</p>
+</div></blockquote>
+<p>不需要使用时记得关闭代理，它会让你访问一些国内的网站变得困难。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quick_start.html" class="btn btn-neutral float-left" title="快速开始" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="readme_link.html" class="btn btn-neutral float-right" title="README" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, 谁都不准修我的Gee妹妹.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

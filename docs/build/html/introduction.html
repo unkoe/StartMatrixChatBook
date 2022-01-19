@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>介绍 &mdash; 开始使用 Matrix 聊天手册! 0.0.1 alpha 文档</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="快速开始" href="quick_start.html" />
+    <link rel="prev" title="欢迎来到使用 Matrix 聊天手册!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> 开始使用 Matrix 聊天手册!
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">介绍</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tip">tip</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#matrix">什么是 Matrix ？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quick_start.html">快速开始</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ss_proxy.html">实用的代理技巧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme_link.html">README</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">工具附录:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ss/2-windows-setup-guide-cn.html">Shadowsocks 设置方法 (Windows)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ss/3-macos-setup-guide-cn.html">Shadowsocks 设置方法 (macOS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ss/4-ios-setup-guide-cn.html">Shadowsocks 设置方法 (iOS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ss/5-android-setup-guide-cn.html">Android 下 Shadowsocks 设置方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ss/6-linux-setup-guide-cn.html">Shadowsocks 设置方法 (Linux)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">开始使用 Matrix 聊天手册!</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>介绍</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/introduction.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>介绍<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">Matrix</span></code> 是一个C/S架构的协议，每个服务器代表一个<code class="docutils literal notranslate"><span class="pre">Homeserver</span></code>，它负责维护属于下属的用户、聊天室等。
+如果我们需要自建聊天服务器，就需要搭建一个<code class="docutils literal notranslate"><span class="pre">Homeserver</span></code>，这样聊天记录、用户数据就能安全的存储在自己的服务器里。</p>
+<p>这样的优势是，不同的<code class="docutils literal notranslate"><span class="pre">Homeserver</span></code>之间可以组成联邦服务器，使得所有实现了<code class="docutils literal notranslate"><span class="pre">Matrix</span></code>协议的<code class="docutils literal notranslate"><span class="pre">Homeserver</span></code>的用户可以交流。
+甚至借助开放的标准，可以同步其它实现了<code class="docutils literal notranslate"><span class="pre">Matrix</span></code>协议的主流聊天软件。</p>
+<a class="reference external image-reference" href="_static/img.png"><img alt="img.png" src="_images/img.png" /></a>
+<p>通过上图☝️我们可以发现，每个 <code class="docutils literal notranslate"><span class="pre">Matrix</span></code> 用户都会属于一个 <code class="docutils literal notranslate"><span class="pre">Homeserver</span></code>，有一个唯一的 ID <code class="docutils literal notranslate"><span class="pre">&#64;user:servername.com</span></code>。</p>
+<section id="tip">
+<h2>tip<a class="headerlink" href="#tip" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><p>你可能不想要了解下面的东西， <a class="reference external" href="quick_start.html">快速开始</a> 将教会你快速使用上 <code class="docutils literal notranslate"><span class="pre">synapse</span></code> 客户端，与其它人进行聊天。</p>
+</div></blockquote>
+</section>
+</section>
+<section id="matrix">
+<h1>什么是 Matrix ？<a class="headerlink" href="#matrix" title="永久链接至标题">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">Matrix</span></code> 指定了一组实用的 <strong>RESTful HTTP JSON API</strong> 作为开放标准，它处理：</p>
+<ul class="simple">
+<li><p>创建和管理完全分布式的聊天室，没有单点控制或故障</p></li>
+<li><p>通过联合服务器和服务的全球开放网络实现房间状态的最终一致的加密安全同步</p></li>
+<li><p>在具有（可选）端到端加密的房间中发送和接收可扩展消息</p></li>
+<li><p>邀请、加入、离开、踢出、禁止房间成员</p></li>
+<li><p>管理用户帐户（注册、登录、注销）</p></li>
+<li><p>使用电子邮件地址、电话号码、Facebook 帐户等第 3 方 ID (3PID) 来验证、识别和发现 Matrix 上的用户。</p></li>
+<li><p>进行 1:1 VoIP 和视频通话</p></li>
+</ul>
+<p>这些 API 旨在在广泛的服务器、服务和客户端上实现，让开发人员在完全开放的 Matrix 生态系统之上构建消息传递和 VoIP 功能，而不是使用封闭或专有的解决方案。希望 Matrix 能够充当新一代完全开放和可互操作的互联网消息传递和 VoIP 应用程序的构建块。</p>
+<p>Synapse 是由 matrix.org 核心团队开发的 Matrix“家庭服务器”实现，用 Python 3/Twisted 编写。</p>
+<p>在 Matrix 中，每个用户都运行一个或多个 Matrix 客户端，这些客户端连接到 Matrix 主服务器。主服务器存储他们所有的个人聊天历史和用户帐户信息——就像邮件客户端连接到 IMAP/SMTP 服务器一样。就像电子邮件一样，您可以运行自己的 Matrix 家庭服务器并控制和拥有自己的通信和历史记录，或者使用由其他人托管的（例如 matrix.org）——Matrix 中没有单点控制或强制性服务提供商，不像WhatsApp、Facebook、环聊等</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="欢迎来到使用 Matrix 聊天手册!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="quick_start.html" class="btn btn-neutral float-right" title="快速开始" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, 谁都不准修我的Gee妹妹.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Android 下 Shadowsocks 设置方法 &mdash; 开始使用 Matrix 聊天手册! 0.0.1 alpha 文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Shadowsocks 设置方法 (Linux)" href="6-linux-setup-guide-cn.html" />
+    <link rel="prev" title="Shadowsocks 设置方法 (iOS)" href="4-ios-setup-guide-cn.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> 开始使用 Matrix 聊天手册!
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html#matrix">什么是 Matrix ？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick_start.html">快速开始</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ss_proxy.html">实用的代理技巧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme_link.html">README</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">工具附录:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="2-windows-setup-guide-cn.html">Shadowsocks 设置方法 (Windows)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-macos-setup-guide-cn.html">Shadowsocks 设置方法 (macOS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4-ios-setup-guide-cn.html">Shadowsocks 设置方法 (iOS)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Android 下 Shadowsocks 设置方法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id6">下载客户端</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">获取 Shadowsocks 账号信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">配置 Shadowsocks 客户端</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id10">通过扫描二维码的方式添加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">手工配置</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">相关说明</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="6-linux-setup-guide-cn.html">Shadowsocks 设置方法 (Linux)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">开始使用 Matrix 聊天手册!</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Android 下 Shadowsocks 设置方法</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/ss/5-android-setup-guide-cn.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="android-shadowsocks">
+<h1>Android 下 Shadowsocks 设置方法<a class="headerlink" href="#android-shadowsocks" title="永久链接至标题">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="#下载客户端">下载客户端</a></p></li>
+<li><p><a class="reference external" href="#获取-shadowsocks-账号信息">获取 Shadowsocks 账号信息</a></p></li>
+<li><p><a class="reference external" href="#配置-shadowsocks-客户端">配置 Shadowsocks 客户端</a></p>
+<ul>
+<li><p><a class="reference external" href="#通过扫描二维码的方式添加">通过扫描二维码的方式添加</a></p></li>
+<li><p><a class="reference external" href="#手工配置">手工配置</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#相关说明">相关说明</a></p></li>
+</ul>
+<section id="id6">
+<h2>下载客户端<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>您可以在<a class="reference external" href="https://play.google.com/store/apps/details?id=com.github.shadowsocks">Google Play</a> 上下载最新的Shadowsocks 客户端，或通过Github 直接<a class="reference external" href="https://github.com/shadowsocks/shadowsocks-android/releases">下载</a> .apk 文件进行安装</p>
+</section>
+<section id="id8">
+<h2>获取 Shadowsocks 账号信息<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<p>详见 分享节点信息</p>
+</section>
+<section id="id9">
+<h2>配置 Shadowsocks 客户端<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<p>安装完成后，在 Shadowsocks 应用程序界面击左上方 Shadowsocks 即可进入配置节点，按下右上方即可选择开启或关闭 Shadowsocks 连接</p>
+<a class="reference external image-reference" href="https://ooo.0o0.ooo/2017/01/04/586d09b4a78a9.png"><img alt="" src="https://ooo.0o0.ooo/2017/01/04/586d09b4a78a9.png" /></a>
+<p>我们按下左上方 Shadowsocks 进入配置节点界面，在右下方 + (下图橙色位置)号即可选择您需要的配置方式</p>
+<a class="reference external image-reference" href="https://ooo.0o0.ooo/2017/01/04/586d09d392dda.png"><img alt="" src="https://ooo.0o0.ooo/2017/01/04/586d09d392dda.png" /></a>
+<section id="id10">
+<h3>通过扫描二维码的方式添加<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<p>按下扫描二维码后到您其他设备打开产品详情界面点击节点红色节点旁的二维码图标</p>
+<a class="reference external image-reference" href="https://ooo.0o0.ooo/2017/01/04/586d0cae41e3b.png"><img alt="" src="https://ooo.0o0.ooo/2017/01/04/586d0cae41e3b.png" /></a>
+<p>进行扫码后即可配置完成</p>
+</section>
+<section id="id11">
+<h3>手工配置<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<a class="reference external image-reference" href="https://i.loli.net/2017/11/02/59fa8533ca17f.jpg"><img alt="" src="https://i.loli.net/2017/11/02/59fa8533ca17f.jpg" /></a>
+</section>
+</section>
+<section id="id12">
+<h2>相关说明<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
+<p>在您信息配置完成后，我们推荐在功能设置中设置「绕过局域网及中国大陆模式」，该模式可以实现自动代理，在下图中其他选项不要启用</p>
+<a class="reference external image-reference" href="https://ooo.0o0.ooo/2017/01/04/586d0a290c833.png"><img alt="" src="https://ooo.0o0.ooo/2017/01/04/586d0a290c833.png" /></a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="4-ios-setup-guide-cn.html" class="btn btn-neutral float-left" title="Shadowsocks 设置方法 (iOS)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="6-linux-setup-guide-cn.html" class="btn btn-neutral float-right" title="Shadowsocks 设置方法 (Linux)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, 谁都不准修我的Gee妹妹.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

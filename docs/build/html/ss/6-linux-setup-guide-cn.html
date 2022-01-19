@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadowsocks 设置方法 (Linux) &mdash; 开始使用 Matrix 聊天手册! 0.0.1 alpha 文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="prev" title="Android 下 Shadowsocks 设置方法" href="5-android-setup-guide-cn.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> 开始使用 Matrix 聊天手册!
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html#matrix">什么是 Matrix ？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick_start.html">快速开始</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ss_proxy.html">实用的代理技巧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme_link.html">README</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">工具附录:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="2-windows-setup-guide-cn.html">Shadowsocks 设置方法 (Windows)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-macos-setup-guide-cn.html">Shadowsocks 设置方法 (macOS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4-ios-setup-guide-cn.html">Shadowsocks 设置方法 (iOS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-android-setup-guide-cn.html">Android 下 Shadowsocks 设置方法</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Shadowsocks 设置方法 (Linux)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#shadowosocks-qt5">Shadowosocks-QT5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shadowsocks-qt5">安装 Shadowsocks-Qt5</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">1. 下载客户端</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">2. 安装客户端</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#shadowsocks">配置 Shadowsocks 账号</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ss">获取SS账号</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">手动输入服务器配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">二维码方式添加服务器</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">命令行客户端</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">开始使用 Matrix 聊天手册!</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Shadowsocks 设置方法 (Linux)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/ss/6-linux-setup-guide-cn.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="shadowsocks-linux">
+<h1>Shadowsocks 设置方法 (Linux)<a class="headerlink" href="#shadowsocks-linux" title="永久链接至标题">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="#Shadowosocks-QT5">GUI 客户端 Shadowsocks-QT5</a></p></li>
+<li><p><a class="reference external" href="#命令行客户端">命令行客户端</a></p></li>
+</ul>
+<section id="shadowosocks-qt5">
+<h2>Shadowosocks-QT5<a class="headerlink" href="#shadowosocks-qt5" title="永久链接至标题">¶</a></h2>
+<p>下面以 Ubuntu 64 位系统做参考，其他系统请参考 <a class="reference external" href="https://github.com/shadowsocks/shadowsocks-qt5/wiki/%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97">安装指南</a></p>
+</section>
+<section id="shadowsocks-qt5">
+<h2>安装 Shadowsocks-Qt5<a class="headerlink" href="#shadowsocks-qt5" title="永久链接至标题">¶</a></h2>
+<p>按照下面的说明在 Ubuntu 上下载并安装 Shadowsocks-Qt5。</p>
+<section id="id3">
+<h3>1. 下载客户端<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>转到 Shadowsocks <a class="reference external" href="https://github.com/shadowsocks/shadowsocks-qt5/releases">下载页面</a>。
+点击最新版本的 <code class="docutils literal notranslate"><span class="pre">Shadowsocks-Qt5-x.x.x-x86_64.AppImage</span></code> 进行下载 (<code class="docutils literal notranslate"><span class="pre">x.x.x</span></code>为版本号) 。</p>
+<a class="reference external image-reference" href="../_static/ubuntu-shadowsockDownload.png"><img alt="下载客户端" src="../_images/ubuntu-shadowsockDownload.png" /></a>
+</section>
+<section id="id5">
+<h3>2. 安装客户端<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<ol class="arabic simple">
+<li><p><strong>右键</strong>单击 “Shadowsocks-Qt5-x.x.x-x86_64.AppImage”  &gt; 选择 “Properties” &gt; 单击 “Permissions” &gt; 在”Allow excuting file as program” 上打勾。</p></li>
+<li><p>双击即可运行</p></li>
+</ol>
+<a class="reference external image-reference" href="../_static/ubuntu-permission.png"><img alt="下载客户端" src="../_images/ubuntu-permission.png" /></a>
+<p>对于32位的系统可能无法运行，所以需要按下面的步骤来安装客户端</p>
+<ol class="arabic simple">
+<li><p>打开终端（搜索 Terminal 或者按 <code class="docutils literal notranslate"><span class="pre">Ctrl+Alt+T</span></code> 键）</p></li>
+<li><p>执行以下命令</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo add-apt-repository ppa:hzwhuang/ss-qt5
+sudo apt-get update
+sudo apt-get install shadowsocks-qt5
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>如果安装成功之后，按<code class="docutils literal notranslate"><span class="pre">win键</span></code>搜索应该能够找到软件，如下图所示：</p></li>
+</ol>
+<a class="reference external image-reference" href="../_static/1561006456277.png"><img alt="1561006456277" src="../_images/1561006456277.png" /></a>
+</section>
+</section>
+<section id="shadowsocks">
+<h2>配置 Shadowsocks 账号<a class="headerlink" href="#shadowsocks" title="永久链接至标题">¶</a></h2>
+<section id="ss">
+<h3>获取SS账号<a class="headerlink" href="#ss" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>单击 “服务” &gt; “我的服务” &gt; 选择 “你可用的产品/服务”。</p></li>
+<li><p>查看你的节点信息。</p></li>
+</ul>
+<blockquote>
+<div><p>以上操作可能不相同，主要目的就是从分享节点的网站中获取节点配置信息。</p>
+</div></blockquote>
+<a class="reference external image-reference" href="../_static/int-portal-productdetail.png"><img alt="查看你的节点信息。" src="../_images/int-portal-productdetail.png" /></a>
+<p>下面两种方法，任选其一</p>
+</section>
+<section id="id6">
+<h3>手动输入服务器配置<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>双击<code class="docutils literal notranslate"><span class="pre">Shadowsocks-Qt5-x.x.x-x86_64.AppImage</span></code> &gt; “Connection” &gt; “Add” &gt; “Manually”。</p></li>
+</ul>
+<a class="reference external image-reference" href="../_static/ubuntu-manually.png"><img alt="Ubuntu 手动设置" src="../_images/ubuntu-manually.png" /></a>
+<ul class="simple">
+<li><p>填写 “Server Address” （为你的节点服务器地址）&gt; 填写”Server Port”（为你的服务端口) &gt; 填写 “Password” （为你的登陆密码)。</p></li>
+<li><p>在 “Local Address” 处填上 “127.0.0.1” &gt; 在 “local Port” 处填上 “1080” &gt; 选择 “Encryption Method” （为你的加密方式)。</p></li>
+</ul>
+<blockquote>
+<div><p>勾选 “Auto connect to connect on application start”, 将会在开启 Shadowsocks-QT5 时自动连接至该服务器。</p>
+</div></blockquote>
+<a class="reference external image-reference" href="../_static/ubuntu-shadowsocksSetting.png"><img alt="服务器设置" src="../_images/ubuntu-shadowsocksSetting.png" /></a>
+</section>
+<section id="id7">
+<h3>二维码方式添加服务器<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>此二维码同样适用于其他客户端。</p>
+<ul class="simple">
+<li><p>双击<code class="docutils literal notranslate"><span class="pre">Shadowsocks-Qt5-x.x.x-x86_64.AppImage</span></code> &gt; “Connection” &gt; “Add” &gt; “Scan QR code on Screen” &gt; 当弹出新的 “Profile Editor”后，点击 “OK”。</p></li>
+<li><p>点击 “Connect” 图标 。</p></li>
+</ul>
+<a class="reference external image-reference" href="../_static/ubuntu-QR.png"><img alt="二维码设置" src="../_images/ubuntu-QR.png" /></a>
+</section>
+</section>
+<section id="id8">
+<h2>命令行客户端<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<p>Python : <a class="reference external" href="https://github.com/shadowsocks/shadowsocks/tree/master#install">https://github.com/shadowsocks/shadowsocks/tree/master#install</a><span class="raw-html-m2r"><br></span>
+Shadowsocks-libev: <a class="reference external" href="https://github.com/shadowsocks/shadowsocks-libev#installation">https://github.com/shadowsocks/shadowsocks-libev#installation</a></p>
+<p>下面我们以 <a class="reference external" href="https://pypi.python.org/pypi/shadowsocks">Python 版</a>的 Shadowsocks 为例</p>
+<p>安装命令：<span class="raw-html-m2r"><br></span>
+Debian / Ubuntu:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">pip</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">shadowsocks</span><span class="o">/</span><span class="n">shadowsocks</span><span class="o">.</span><span class="n">git</span><span class="nd">@master</span>
+</pre></div>
+</div>
+<p>CentOS:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yum</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">setuptools</span> <span class="o">&amp;&amp;</span> <span class="n">easy_install</span> <span class="n">pip</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">shadowsocks</span><span class="o">/</span><span class="n">shadowsocks</span><span class="o">.</span><span class="n">git</span><span class="nd">@master</span>
+</pre></div>
+</div>
+<p>For CentOS 7, if you need AEAD ciphers, you need install libsodium</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dnf</span> <span class="n">install</span> <span class="n">libsodium</span> <span class="n">python34</span><span class="o">-</span><span class="n">pip</span>
+<span class="n">pip3</span> <span class="n">install</span>  <span class="n">git</span><span class="o">+</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">shadowsocks</span><span class="o">/</span><span class="n">shadowsocks</span><span class="o">.</span><span class="n">git</span><span class="nd">@master</span>
+</pre></div>
+</div>
+<p>Linux distributions with snap:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">snap</span> <span class="n">install</span> <span class="n">shadowsocks</span>
+</pre></div>
+</div>
+<p>创建一个 <code class="docutils literal notranslate"><span class="pre">/etc/shadowsocks.json</span></code> 文件，格式如下</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;server&quot;</span><span class="p">:</span><span class="s2">&quot;服务器 IP 或是域名&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;server_port&quot;</span><span class="p">:</span><span class="n">端口号</span><span class="p">,</span>
+    <span class="s2">&quot;local_address&quot;</span><span class="p">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;local_port&quot;</span><span class="p">:</span><span class="mi">1080</span><span class="p">,</span>
+    <span class="s2">&quot;password&quot;</span><span class="p">:</span><span class="s2">&quot;密码&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;timeout&quot;</span><span class="p">:</span><span class="mi">300</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span><span class="s2">&quot;加密方式 (chacha20-ietf-poly1305 / aes-256-cfb)&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;fast_open&quot;</span><span class="p">:</span> <span class="n">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Python 版客户端命令是 sslocal ， Shadowsocks-libev 客户端命令为 ss-local</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">sslocal</span> <span class="o">-</span><span class="n">c</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">shadowsocks</span><span class="o">.</span><span class="n">json</span> <span class="o">-</span><span class="n">d</span> <span class="n">start</span>
+</pre></div>
+</div>
+<p>Debian / Ubuntu：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">proxychains</span>
+</pre></div>
+</div>
+<p>编辑 <code class="docutils literal notranslate"><span class="pre">/etc/proxychains.conf</span></code></p>
+<p>修改最后一行</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">socks5</span> <span class="mf">127.0.0.1</span> <span class="mi">1080</span>
+</pre></div>
+</div>
+<p>接着我们就可以直接 用 <code class="docutils literal notranslate"><span class="pre">proxychains</span></code> + 命令的方式使用代理，例如</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">proxychains</span> <span class="n">curl</span> <span class="n">xxxx</span>
+<span class="n">proxychains</span> <span class="n">wget</span> <span class="n">xxxx</span>
+
+<span class="n">sudo</span> <span class="n">proxychains</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">xxxx</span>
+</pre></div>
+</div>
+<p>需要在程序内设置一个协议为 socks v5 的代理</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>服务器：127.0.0.1
+端口：1080 #应与Shadowsocks客户端的本地端口对应，默认为1080
+</pre></div>
+</div>
+<p>在终端内输入</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>lsof –i:1080
+</pre></div>
+</div>
+<p>kill 相应的 pid 即可</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="5-android-setup-guide-cn.html" class="btn btn-neutral float-left" title="Android 下 Shadowsocks 设置方法" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, 谁都不准修我的Gee妹妹.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

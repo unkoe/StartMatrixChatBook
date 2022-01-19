@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadowsocks 设置方法 (Windows) &mdash; 开始使用 Matrix 聊天手册! 0.0.1 alpha 文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Shadowsocks 设置方法 (macOS)" href="3-macos-setup-guide-cn.html" />
+    <link rel="prev" title="README" href="../readme_link.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> 开始使用 Matrix 聊天手册!
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html#matrix">什么是 Matrix ？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick_start.html">快速开始</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ss_proxy.html">实用的代理技巧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../readme_link.html">README</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">工具附录:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Shadowsocks 设置方法 (Windows)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id10">系统要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">安装 Shadowsocks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id13">1. 下载客户端</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">2. 解压客户端</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id17">配置 Shadowsocks 账号</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id18">手动添加账号</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">二维码方式增加节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">配置文件添加账号</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id21">配置系统代理模式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id22">注意事项</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3-macos-setup-guide-cn.html">Shadowsocks 设置方法 (macOS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4-ios-setup-guide-cn.html">Shadowsocks 设置方法 (iOS)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-android-setup-guide-cn.html">Android 下 Shadowsocks 设置方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6-linux-setup-guide-cn.html">Shadowsocks 设置方法 (Linux)</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">开始使用 Matrix 聊天手册!</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Shadowsocks 设置方法 (Windows)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/ss/2-windows-setup-guide-cn.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="shadowsocks-windows">
+<h1>Shadowsocks 设置方法 (Windows)<a class="headerlink" href="#shadowsocks-windows" title="永久链接至标题">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="#系统要求">系统要求</a></p></li>
+<li><p><a class="reference external" href="#安装-shadowsocks">安装 Shadowsocks</a></p>
+<ul>
+<li><p><a class="reference external" href="#1-下载客户端">1. 下载客户端</a></p></li>
+<li><p><a class="reference external" href="#2-解压客户端">2. 解压客户端</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#配置-shadowsocks-账号">配置 Shadowsocks 账号</a></p>
+<ul>
+<li><p><a class="reference external" href="#手动添加账号">手动添加账号</a></p></li>
+<li><p><a class="reference external" href="#二维码方式增加节点">二维码方式增加节点</a></p></li>
+<li><p><a class="reference external" href="#配置文件添加账号">配置文件添加账号</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#配置系统代理模式">配置系统代理模式</a></p></li>
+<li><p><a class="reference external" href="#注意事项">注意事项</a></p></li>
+</ul>
+<section id="id10">
+<h2>系统要求<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<p><strong>在安装之前，请始终确保您的系统满足最低系统要求。</strong></p>
+<p>您需要具备 Windows 7 SP1 或更高版本才能运行 Shadowsocks。如果您的操作系统版本较旧， 则请先升级到  Windows 7 SP1 或更高版本。</p>
+<p><strong>NET Framework</strong>: 如果你的计算机未安装.NET Framework, 请点击 <a class="reference external" href="https://www.microsoft.com/zh-tw/download/details.aspx?id=53345">这里</a> 下载最新版本的 .NET Framework。</p>
+</section>
+<section id="id12">
+<h2>安装 Shadowsocks<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
+<p>按照下面的说明在 Windows 中下载并安装 Shadowsocks。</p>
+<section id="id13">
+<h3>1. 下载客户端<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<p>访问 Shadowsocks Windows 客户端 <a class="reference external" href="https://github.com/shadowsocks/shadowsocks-windows/releases">下载页面</a>。
+下载最新版本的 <code class="docutils literal notranslate"><span class="pre">Shadowsocks-x.x.x.zip</span></code>  (<code class="docutils literal notranslate"><span class="pre">x.x.x</span></code>为版本号) 。</p>
+<a class="reference external image-reference" href="../_static/win_shadowsockDownload.png"><img alt="下载页面" src="../_images/win_shadowsockDownload.png" /></a>
+<p>或是前往 <a class="reference external" href="https://shadowsocks.org/en/download/clients.html">客户端中心</a> 下载</p>
+</section>
+<section id="id16">
+<h3>2. 解压客户端<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<p>右键 <code class="docutils literal notranslate"><span class="pre">Shadowsocks-x.x.x.zip</span></code> 压缩文件 &gt; “全部解压缩”。
+点击 “浏览” 选择想要解压到的文件目录 &gt; “完成时显示提取的文件” &gt; “提取”。
+双击运行 <code class="docutils literal notranslate"><span class="pre">Shadowsocks.exe</span></code>。</p>
+<a class="reference external image-reference" href="../_static/win_unzipSS.png"><img alt="解压 Shadowsocks.exe" src="../_images/win_unzipSS.png" /></a>
+<a class="reference external image-reference" href="../_static/win_unzipSS2.png"><img alt="解压 Shadowsocks.exe" src="../_images/win_unzipSS2.png" /></a>
+<a class="reference external image-reference" href="../_static/win_doubleClickSS.png"><img alt="双击运行 Shadowsocks.exe" src="../_images/win_doubleClickSS.png" /></a>
+</section>
+</section>
+<section id="id17">
+<h2>配置 Shadowsocks 账号<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><p>在您的计算机上， 执行下列任一操作</p>
+</div></blockquote>
+<section id="id18">
+<h3>手动添加账号<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
+<p>从分享节点的网站中依次填入相应信息，确定即可</p>
+<a class="reference external image-reference" href="../_static/1549868618888.png"><img alt="1549868618888" src="../_images/1549868618888.png" /></a>
+</section>
+<section id="id19">
+<h3>二维码方式增加节点<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<p><strong>在分享节点的网站中一般都有查看二维码的功能。</strong></p>
+<a class="reference external image-reference" href="../_static/1549868214348.png"><img alt="1549868214348" src="../_images/1549868214348.png" /></a>
+<p>此二维码同样适用于其他客户端。</p>
+<ul>
+<li><p>右键状态栏
+.. image:: ../_static/win_icon.png</p>
+<blockquote>
+<div><blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">target</dt>
+<dd class="field-odd"><p>../_static/win_icon.png</p>
+</dd>
+<dt class="field-even">alt</dt>
+<dd class="field-even"><p>ss icon</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>&gt; “服务器” &gt; “扫描屏幕上的二维码”。</p>
+</div></blockquote>
+</li>
+<li><p>点击 “启用系统代理” 。</p></li>
+</ul>
+<a class="reference external image-reference" href="../_static/win_QR.png"><img alt="QR" src="../_images/win_QR.png" /></a>
+</section>
+<section id="id20">
+<h3>配置文件添加账号<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>将 <code class="docutils literal notranslate"><span class="pre">gui-config.json</span></code> 拖移到和 <code class="docutils literal notranslate"><span class="pre">Shadowsocks.exe</span></code> 同一个文件目录下。</p></li>
+</ul>
+<a class="reference external image-reference" href="../_static/win_together.png"><img alt="gui-config.json 拖到和 Shadowsocks.exe 同目录" src="../_images/win_together.png" /></a>
+<ul>
+<li><p>双击 <code class="docutils literal notranslate"><span class="pre">Shadowsocks.exe</span></code> &gt; 右键状态栏
+.. image:: ../_static/win_icon.png</p>
+<blockquote>
+<div><blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">target</dt>
+<dd class="field-odd"><p>../_static/win_icon.png</p>
+</dd>
+<dt class="field-even">alt</dt>
+<dd class="field-even"><p>ss icon</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>&gt;  单击 “服务器”  &gt; 即可看到服务器信息已自动填充完成。</p>
+</div></blockquote>
+</li>
+</ul>
+<p>即可看到服务器信息已自动填充完成</p>
+<ul>
+<li><p>右键状态栏
+.. image:: ../_static/win_icon.png</p>
+<blockquote>
+<div><blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">target</dt>
+<dd class="field-odd"><p>../_static/win_icon.png</p>
+</dd>
+<dt class="field-even">alt</dt>
+<dd class="field-even"><p>ss icon</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>&gt; “启用系统代理”。</p>
+</div></blockquote>
+</li>
+</ul>
+<a class="reference external image-reference" href="../_static/win_enable.png"><img alt="右键图标" src="../_images/win_enable.png" /></a>
+</section>
+</section>
+<section id="id21">
+<h2>配置系统代理模式<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
+<ul>
+<li><p>右键状态栏
+.. image:: ../_static/win_icon.png</p>
+<blockquote>
+<div><blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">target</dt>
+<dd class="field-odd"><p>../_static/win_icon.png</p>
+</dd>
+<dt class="field-even">alt</dt>
+<dd class="field-even"><p>ss icon</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>&gt; “系统代理模式” &gt; “PAC模式”。</p>
+</div></blockquote>
+</li>
+<li><p>如果使用 PAC 模式无法访问网站，请点击 <a class="reference external" href="https://portal.shadowsocks.nu/dl.php?type=d&amp;id=14">Pac文件下载</a> 下载 pac 配置文件，将  <code class="docutils literal notranslate"><span class="pre">pac.txt</span></code> 文件拖放在与 <code class="docutils literal notranslate"><span class="pre">Shadowsocks.exe</span></code> 相同的文件目录下。</p></li>
+</ul>
+<a class="reference external image-reference" href="../_static/win_pac.png"><img alt="pac模式" src="../_images/win_pac.png" /></a>
+<a class="reference external image-reference" href="../_static/win_pact.png"><img alt="下载 pac" src="../_images/win_pact.png" /></a>
+</section>
+<section id="id22">
+<h2>注意事项<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>PAC模式: 表示可以实现自动代理， 及本来可以访问的网站不会经过代理，推荐日常使用。</p></li>
+<li><p>全局模式: 表示计算机内大多数流量都会经过代理，不推荐日常使用。</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../readme_link.html" class="btn btn-neutral float-left" title="README" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="3-macos-setup-guide-cn.html" class="btn btn-neutral float-right" title="Shadowsocks 设置方法 (macOS)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, 谁都不准修我的Gee妹妹.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
