@@ -66,7 +66,7 @@
 
 此二维码同样适用于其他客户端。
 
-* 右键状态栏![ss icon](../_static/win_icon.png) > "服务器” > "扫描屏幕上的二维码"。
+* 右键状态栏 > "服务器” > "扫描屏幕上的二维码"。
 * 点击 "启用系统代理" 。
 
 ![QR](../_static/win_QR.png)
@@ -78,17 +78,17 @@
 
 ![gui-config.json 拖到和 Shadowsocks.exe 同目录](../_static/win_together.png)
 
-* 双击 `Shadowsocks.exe` > 右键状态栏 ![ss icon](../_static/win_icon.png) >  单击 “服务器”  > 即可看到服务器信息已自动填充完成。
+* 双击 `Shadowsocks.exe` > 右键状态栏  >  单击 “服务器”  > 即可看到服务器信息已自动填充完成。
 
 即可看到服务器信息已自动填充完成
 
-* 右键状态栏![ss icon](../_static/win_icon.png) > "启用系统代理”。
+* 右键状态栏 > "启用系统代理”。
 
 ![右键图标](../_static/win_enable.png)
 
 
 ## 配置系统代理模式
-* 右键状态栏![ss icon](../_static/win_icon.png) > "系统代理模式" > "PAC模式"。
+* 右键状态栏 > "系统代理模式" > "PAC模式"。
 
 * 如果使用 PAC 模式无法访问网站，请点击 [Pac文件下载](https://portal.shadowsocks.nu/dl.php?type=d&id=14) 下载 pac 配置文件，将  `pac.txt` 文件拖放在与 `Shadowsocks.exe` 相同的文件目录下。
 

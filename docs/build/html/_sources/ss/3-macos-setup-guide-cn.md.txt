@@ -47,7 +47,7 @@
 
 #### 手动添加
 
-* 点击屏幕顶部菜单栏的 ![menu_icon_disabled](../_static/mac-menu_icon_disabled.png)> "服务器" > "服务器设置"。
+* 点击屏幕顶部菜单栏的 Shadowsocks 托盘> "服务器" > "服务器设置"。
 
 ![点击屏幕最上方菜单栏](../_static/mac-menubar.png)
 
@@ -62,14 +62,14 @@
 
 此二维码同样适用于其他客户端。
 
-* 点击屏幕顶部菜单栏的 ![menu_icon_disabled](../_static/mac-menu_icon_disabled.png) > "扫描屏幕上的二维码" > 当看到 "已添加新的Shadowsocks服务器"，代表添加成功。
+* 点击屏幕顶部菜单栏的 Shadowsocks 托盘 > "扫描屏幕上的二维码" > 当看到 "已添加新的Shadowsocks服务器"，代表添加成功。
 * 点击 "打开Shadowsocks" 。
 * 当显示 `Shadowsocks: On`时，表示系统代理已经打开。
 
 ![打开ss](../_static/mac-QR.png)
 
 ## 配置系统代理模式
-*  点击屏幕右上方菜单栏的 ![menu_icon_disabled](../_static/mac-menu_icon_disabled.png)  > "PAC自动模式"。
+*  点击屏幕右上方菜单栏的 Shadowsocks 托盘  > "PAC自动模式"。
 
 ![pac设置](../_static/mac-pac.png)
 

@@ -23,4 +23,3 @@
    ss/3-macos-setup-guide-cn.md
    ss/4-ios-setup-guide-cn.md
    ss/5-android-setup-guide-cn.md
-   ss/6-linux-setup-guide-cn.md
