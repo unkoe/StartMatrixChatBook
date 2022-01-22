@@ -34,6 +34,8 @@ Github 除了代码托管，也有各种乱七八糟的资源，我们需要在�
 
 笔者发现 `网易UU` 能免费加速 `Github`，需要在网易UU里搜索加速至 **学术资源** ，这样不需要一些修改 hosts 的奇技淫巧即可获得良好的体验。
 
+![image](https://user-images.githubusercontent.com/47616680/150634730-601411e0-d4e2-416c-98ab-4325804e45d0.png)
+
 ### 订阅 Shadowsocks 服务
 
 Shadowsocks 是一个 C/S 架构的代理工具，它由境外没有被 GFW 封杀的服务器搭建 Server 端提供流量代理转发能力，
