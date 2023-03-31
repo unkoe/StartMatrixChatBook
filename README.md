@@ -10,7 +10,6 @@ Python == 3.11
 
 ### requirements
 
-
 ```
 Sphinx
 sphinxcontrib-napoleon
@@ -20,4 +19,8 @@ m2r2
 sphinx-rtd-theme
 ```
 
-参考 [requirements.txt](https://github.com/unkoe/StartMatrixChatBook/blob/master/requirements.txt)
+直接安装：
+
+```
+pip install -r requirements.txt
+```
